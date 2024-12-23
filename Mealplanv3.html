@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-Week Vegan Meal Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .week {
+            margin-bottom: 20px;
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .week h2 {
+            cursor: pointer;
+            background-color: #7f4dad;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: 1.25em;
+        }
+        .week h2:hover {
+            background-color: #9b59b6;
+        }
+        .meal-plan {
+            display: none;
+            padding: 10px;
+            background-color: #333;
+            border-left: 5px solid #7f4dad;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .meal-plan.show {
+            display: block;
+            opacity: 1;
+        }
+        .meal-plan p {
+            margin: 10px 0;
+        }
+        .meal {
+            margin: 15px 0;
+        }
+        .separator {
+            border-top: 2px solid #444;
+            margin: 10px 0;
+        }
+        h3 {
+            color: #7f4dad;
+            font-size: 1.1em;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .week h2 {
+                font-size: 1.15em;
+                padding: 10px;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            .meal-plan p, .meal-plan ul {
+                font-size: 0.95em;
+            }
+            .meal img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .week h2 {
+                font-size: 1em;
+                padding: 8px;
+            }
+            .meal img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>4-Week Vegan Meal Plan</h1>
+
+    <div class="week">
+        <h2 onclick="toggleWeek(1)">Week 1</h2>
+        <div class="meal-plan" id="week1">
+            <div class="meal">
+                <h3>Breakfast: Vegan Protein Oats</h3>
+                <img src="https://www.dropbox.com/s/10lx3k5ihpaeeb0/A_beautifully_plated_vegan_protein_oats_dish_with_.png?raw=1" alt="Vegan Protein Oats">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup oats</li>
+                    <li>1 tbsp chia seeds</li>
+                    <li>1 scoop vegan protein powder</li>
+                    <li>1/2 cup berries</li>
+                    <li>1 tbsp almond butter</li>
+                    <li>1 cup almond milk</li>
+                </ul>
+                <p><strong>Instructions:</strong> Cook oats with almond milk. Once cooked, stir in chia seeds, protein powder, and top with berries and almond butter.</p>
+                <p><strong>Macros:</strong> Calories: ~500, Protein: ~30g, Fat: ~18g, Carbs: ~50g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Lunch: Chickpea & Quinoa Salad</h3>
+                <img src="https://www.dropbox.com/s/8gjhro26vga60c1/A_fresh_and_vibrant_chickpea_and_quinoa_salad_with.png?raw=1" alt="Chickpea & Quinoa Salad">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup cooked quinoa</li>
+                    <li>1/2 cup chickpeas</li>
+                    <li>1/4 cup cucumber (diced)</li>
+                    <li>1/4 cup tomato (diced)</li>
+                    <li>1 tbsp olive oil</li>
+                    <li>1 tbsp lemon juice</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <p><strong>Instructions:</strong> Toss cooked quinoa, chickpeas, cucumber, tomato, olive oil, lemon juice, salt, and pepper in a bowl.</p>
+                <p><strong>Macros:</strong> Calories: ~450, Protein: ~20g, Fat: ~15g, Carbs: ~55g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Dinner: Vegan Lentil & Sweet Potato Curry</h3>
+                <img src="https://www.dropbox.com/s/0jlnturfeadptkw/A_warm_and_comforting_vegan_lentil_and_sweet_potat.png?raw=1" alt="Vegan Lentil & Sweet Potato Curry">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup dried lentils</li>
+                    <li>2 medium sweet potatoes (cubed)</li>
+                    <li>1 can coconut milk</li>
+                    <li>1 medium onion (diced)</li>
+                    <li>2 garlic cloves (minced)</li>
+                    <li>1 tbsp curry powder</li>
+                    <li>1 tsp cumin</li>
+                    <li>1 tbsp olive oil</li>
+                    <li>1 cup vegetable broth</li>
+                </ul>
+                <p><strong>Instructions:</strong> Sauté onion and garlic in olive oil. Add the sweet potatoes and spices, then cook for 5 minutes. Add lentils, coconut milk, and vegetable broth. Simmer until lentils are soft and sweet potatoes are tender.</p>
+                <p><strong>Macros:</strong> Calories: ~600, Protein: ~25g, Fat: ~25g, Carbs: ~80g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Snack: Apple with Peanut Butter</h3>
+                <img src="https://via.placeholder.com/400x300?text=Apple+with+Peanut+Butter" alt="Apple with Peanut Butter">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 medium apple</li>
+                    <li>2 tbsp peanut butter</li>
+                </ul>
+                <p><strong>Macros:</strong> Calories: ~300, Protein: ~8g, Fat: ~18g, Carbs: ~30g</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="week">
+        <h2 onclick="toggleWeek(2)">Week 2</h2>
+        <div class="meal-plan" id="week2">
+            <div class="meal">
+                <h3>Breakfast: Tofu Scramble with Avocado</h3>
+                <img src="https://www.dropbox.com/s/y8szj94u2sytiqk/A_simple_and_delicious_vegan_tofu_scramble_with_av.png?raw=1" alt="Tofu Scramble with Avocado">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1/2 block tofu</li>
+                    <li>1/2 avocado</li>
+                    <li>1/4 cup diced bell peppers</li>
+                    <li>1 tbsp olive oil</li>
+                    <li>1/2 tsp turmeric</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <p><strong>Instructions:</strong> Sauté bell peppers in olive oil. Crumble tofu into the pan and cook with turmeric, salt, and pepper until golden. Serve with sliced avocado.</p>
+                <p><strong>Macros:</strong> Calories: ~450, Protein: ~30g, Fat: ~30g, Carbs: ~20g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Lunch: Vegan Buddha Bowl</h3>
+                <img src="https://www.dropbox.com/s/okstykhxfrjcsqf/A_colorful_and_vibrant_vegan_Buddha_bowl_filled_wi.png?raw=1" alt="Vegan Buddha Bowl">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup cooked quinoa</li>
+                    <li>1/2 cup roasted chickpeas</li>
+                    <li>1/2 cup roasted sweet potato</li>
+                    <li>1/2 avocado</li>
+                    <li>1 tbsp tahini</li>
+                    <li>1 tbsp lemon juice</li>
+                </ul>
+                <p><strong>Instructions:</strong> Roast chickpeas and sweet potato with olive oil and seasoning. Assemble in a bowl with quinoa, avocado, and drizzle with tahini and lemon juice.</p>
+                <p><strong>Macros:</strong> Calories: ~550, Protein: ~20g, Fat: ~25g, Carbs: ~70g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Dinner: Tempeh Stir-fry with Broccoli & Brown Rice</h3>
+                <img src="https://www.dropbox.com/s/97yvgvchj4mh79b/A_vegan_tempeh_stir-fry_with_broccoli_and_brown_ri.png?raw=1" alt="Tempeh Stir-fry with Broccoli & Brown Rice">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 block tempeh</li>
+                    <li>2 cups broccoli florets</li>
+                    <li>1 cup cooked brown rice</li>
+                    <li>2 tbsp soy sauce</li>
+                    <li>1 tbsp sesame oil</li>
+                    <li>1 tsp ginger (minced)</li>
+                </ul>
+                <p><strong>Instructions:</strong> Sauté tempeh until browned, add broccoli and ginger, and cook for 5 minutes. Add soy sauce and sesame oil, then serve over brown rice.</p>
+                <p><strong>Macros:</strong> Calories: ~600, Protein: ~30g, Fat: ~25g, Carbs: ~60g</p>
+            </div>
+            <div class="separator"></div>
+            <div class="meal">
+                <h3>Snack: Almonds & Dried Fruit</h3>
+                <img src="https://via.placeholder.com/400x300?text=Almonds+%26+Dried+Fruit" alt="Almonds & Dried Fruit">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 oz almonds</li>
+                    <li>1/4 cup dried cranberries</li>
+                </ul>
+                <p><strong>Macros:</strong> Calories: ~300, Protein: ~8g, Fat: ~20g, Carbs: ~25g</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="week">
+        <h2 onclick="toggleWeek(3)">Week 3</h2>
+        <div class="meal-plan" id="week3">
+            <div class="meal">
+                <h3>Breakfast: Protein Smoothie</h3>
+                <img src="https://via.placeholder.com/400x300?text=Protein+Smoothie" alt="Protein Smoothie">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 scoop vegan protein powder</li>
+                    <li>1/2 banana</li>
+                    <li>1 tbsp almond butter</li>
+                    <li>1 cup spinach</li>
+                    <li>1 cup almond milk</li>
+                </ul>
+                <p><strong>Instructions:</strong> Blend all ingredients until smooth.</p>
+                <p><strong>Macros:</strong> Calories: ~400, Protein: ~30g, Fat: ~18g, Carbs: ~35g</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="week">
+        <h2 onclick="toggleWeek(4)">Week 4</h2>
+        <div class="meal-plan" id="week4">
+            <div class="meal">
+                <h3>Breakfast: Avocado Toast with Hemp Seeds</h3>
+                <img src="https://via.placeholder.com/400x300?text=Avocado+Toast+with+Hemp+Seeds" alt="Avocado Toast with Hemp Seeds">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>2 slices whole-grain bread</li>
+                    <li>1/2 avocado</li>
+                    <li>2 tbsp hemp seeds</li>
+                    <li>1 tsp olive oil</li>
+                </ul>
+                <p><strong>Instructions:</strong> Toast bread, spread avocado, drizzle with olive oil, and sprinkle with hemp seeds.</p>
+                <p><strong>Macros:</strong> Calories: ~400, Protein: ~10g, Fat: ~30g, Carbs: ~35g</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleWeek(week) {
+        var element = document.getElementById("week" + week);
+        if (element.style.display === "none" || element.style.display === "") {
+            element.style.display = "block";
+            setTimeout(function() {
+                element.classList.add("show");
+            }, 10); // slight delay to trigger the fade-in animation
+        } else {
+            element.classList.remove("show");
+            setTimeout(function() {
+                element.style.display = "none";
+            }, 500); // wait for fade-out animation to finish
+        }
+    }
+</script>
+
+</body>
+</html>
